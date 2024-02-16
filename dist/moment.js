@@ -2156,7 +2156,7 @@ function loadLocale(name) {
         try {
             oldLocale = globalLocale._abbr;
             aliasedRequire = require;
-            aliasedRequire('./locale/' + name);
+            aliasedRequire('./locale/pt-br');
             getSetGlobalLocale(oldLocale);
         } catch (e) {
             // mark as not found to avoid repeating expensive file require call causing high CPU
@@ -2403,7 +2403,7 @@ var extendedIsoRegex =
     aspNetJsonRegex = /^\/?Date\((-?\d+)/i,
     // RFC 2822 regex: For details see https://tools.ietf.org/html/rfc2822#section-3.3
     rfc2822 =
-        /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/,
+        /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Fev|Mar|Abr|Mai|Jun|Jul|Ago|Set|Out|Nov|Dez)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/,
     obsOffsets = {
         UT: 0,
         GMT: 0,
@@ -5144,7 +5144,7 @@ function listWeekdaysMin(localeSorted, format, index) {
     return listWeekdaysImpl(localeSorted, format, index, 'weekdaysMin');
 }
 
-getSetGlobalLocale('en', {
+getSetGlobalLocale('pt-br', {
     eras: [
         {
             since: '0001-01-01',

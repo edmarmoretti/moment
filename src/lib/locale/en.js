@@ -2,7 +2,7 @@ import './prototype';
 import { getSetGlobalLocale } from './locales';
 import toInt from '../utils/to-int';
 
-getSetGlobalLocale('en', {
+getSetGlobalLocale('pt-br', {
     eras: [
         {
             since: '0001-01-01',
